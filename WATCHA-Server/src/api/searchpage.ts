@@ -6,7 +6,7 @@ import SearchMate from "../models/SearchMate";
 
 const router=express.Router();
 
-router.post("/High",
+router.post("/high",
     async(req: Request,res: Response) => {
         const { image, name } = req.body;
 
@@ -23,7 +23,7 @@ router.post("/High",
         }
 });
 //Search화면 인기검색 콘텐츠
-router.get("/Popular",async(req,res) => {
+router.get("/popular",async(req,res) => {
     try {
         const popular = await SearchPopular.find();
         const searchPopular = popular.map(s => {
@@ -45,7 +45,7 @@ router.get("/Popular",async(req,res) => {
 });
 
 //Search화면 높은평점의 추천 콘텐츠
-router.get("/High",async(req,res) => {
+router.get("/high",async(req,res) => {
     try {
         const high = await SearchHigh.find();
         const searchHigh = high.map(u => {
@@ -68,7 +68,7 @@ router.get("/High",async(req,res) => {
 });
 
 //Search화면 왓챠 크루들의 컬렉션
-router.get("/Collection",async(req,res) => {
+router.get("/collection",async(req,res) => {
     try {
         const collection = await SearchCollection.find();
         const searchCollection = collection.map(m => {
@@ -91,7 +91,7 @@ router.get("/Collection",async(req,res) => {
 });
 
 //Search화면 당신의 영화 메이트
-router.get("/Mate",async(req,res) => {
+router.get("/mate",async(req,res) => {
     try {
         const mate = await SearchMate.find();
         const searchMate = mate.map(y => {

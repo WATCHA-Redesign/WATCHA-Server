@@ -8,6 +8,7 @@ app.use(express.json());
 
 // Define Routes
 app.use("/api/mainpage", require("./api/mainpage"));
+app.use("/api/searchpage", require("./api/searchpage"));
 
 // error handler
 app.use(function (err, req, res, next) {
