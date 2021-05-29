@@ -80,7 +80,7 @@ router.get("/collection",async(req,res) => {
         });
         return res.status(200).json({
             "success" : true,
-            "message" : "검색뷰 높은 평점 추천 콘텐츠 조회 성공",
+            "message" : "컬렉션 조회 성공",
             "data" : { searchCollection }
         });
     } catch(error) {
@@ -103,7 +103,7 @@ router.get("/mate",async(req,res) => {
         });
         return res.status(200).json({
             "success" : true,
-            "message" : "검색뷰 높은 평점 추천 콘텐츠 조회 성공",
+            "message" : "영화 메이트 조회 성공",
             "data" : { searchMate }
         });
     } catch(error) {
