@@ -29,6 +29,7 @@ router.get("/popular",async(req,res) => {
         const searchPopular = popular.map(s => {
             return{
                 image: s.image,
+                name: s.name
             }
         });
         return res.status(200).json({
