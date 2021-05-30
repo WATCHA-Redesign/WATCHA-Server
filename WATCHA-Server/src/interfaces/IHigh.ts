@@ -1,4 +1,5 @@
 export interface IHigh {
     image: string;
-    name: string;
+    title: string;
+    subtitle: string;
 }
