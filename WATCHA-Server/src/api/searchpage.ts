@@ -52,7 +52,8 @@ router.get("/high",async(req,res) => {
         const searchHigh = high.map(u => {
             return{
                 image: u.image,
-                name: u.name
+                title: u.title,
+                subtitle: u.subtitle
             }
         });
         return res.status(200).json({
